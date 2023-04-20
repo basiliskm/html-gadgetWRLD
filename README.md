@@ -1,2 +1,2 @@
-# html-alphaweb
+# html-GadgetWRLD
 Eshop της εταιρειας GadgetWRLD
