@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Προϊόντα - Gadget WRLD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    
+<!-------------------HEADER------------>
+    <div class="header">
+     <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="file:///C:/Users/billy/OneDrive/%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%AE%CF%82/gadget%20wrld/index.html"><img src="images/logo.png" width="200px" alt="Logo"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="file:///C:/Users/billy/OneDrive/%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%AE%CF%82/gadget%20wrld/index.html">Αρχική</a></li>
+                    <li><a href="file:///C:/Users/billy/OneDrive/%CE%A5%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%AE%CF%82/gadget%20wrld/products.html">Προϊόντα</a></li>
+                    <li><a href="">Σχετικά</a></li>
+                    <li><a href="">Επικοινωνία</a></li>
+                    <li><a href="">Λογαριασμός</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="70px" height="70px" class= "cart"></a>
+            <img src="images/menu.png" class = "menu" onclick="menutoggle()">
+        </div>
+
+  
+      </div>
+    </div>
+ <!------------------------------------account------------------------------------------->
+	<div class="container register">
+	<div class="sign-up">
+		<h2>Σύνδεση</h2>
+		<br><br><br><br>
+		<form name="myform1"  action = "authentication.php" method = "post">
+
+		<label for="uname"><b>Ονομα Χρήστη ή Email</b></label>
+		<input type="text" name="user"required>
+
+		<label for="psw"><b>Κωδικός πρόσβασης</b></label>
+		<input type="password" name="password"  required>
+
+		<button type="submit" class="btnsubmit">Σύνδεση</button>
+		<br><br>
+		<label>
+		  <input type="checkbox" name="remember"> Remember me?
+		</label>
+		
+		</form>
+		<br>
+		<h5>Δεν είστε μέλος; Κάντε εγγραφή <a href="account.html">εδω</a></h5>
+		<br><br>
+	</div>
+    </div>
+    
+<!-----------------Footer------------>
+    <div class="footer">
+        <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <form>
+                            <input type="text" placeholder="Συμπληρώστε το Email" name="email" id="email" required>
+                            <br>
+                            <button type="submit" class="registerbtn">Εγγραφή στο Newsletter</button>
+                        </form>
+                    </div>
+                    <div class="footer-col">
+                        <img src="images/logo.png" width= 200px;>
+                        <p>Since 2022<i class="fa fa-copyright" aria-hidden="true"></i></p>
+                        <br>
+                        <a href=""><img src="images/instagram.jpg" width= 30px;></a>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Χρήσιμοι σύνδεσμοι</h3>
+                        <ul>
+                            <a href=""><li>Σχετικά</li></a>
+                            <a href=""><li>Κουπόνια</li></a>
+                            <a href=""><li>Πολιτική Επιστροφών</li></a>
+                            <a href=""><li>Οροι χρήσης</li></a>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        
+    </div>
+ <!-----------------------js code------------------->   
+<script>
+
+var mybutton = document.getElementById("myBtn");
+var MenuItems = document.getElementById("MenuItems");
+
+window.onscroll = function() {scrollFunction()};
+MenuItems.style.maxHeight = "0px";
+    
+function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+    else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+}
+    
+function scrollFunction() {
+  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+        
+        SmallImg[0].onclick = function(){
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function(){
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function(){
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function(){
+            ProductImg.src = SmallImg[3].src;
+        }
+        SmallImg[4].onclick = function(){
+            ProductImg.src = SmallImg[4].src;
+        }
+    
+    
+</script>
+</body>
+</html>
